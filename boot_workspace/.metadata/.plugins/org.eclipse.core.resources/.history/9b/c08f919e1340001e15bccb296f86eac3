@@ -1,0 +1,10 @@
+package com.example.demo.entity;
+
+import java.time.LocalDateTime;
+
+abstract class TimeBased {
+	
+	private LocalDateTime regAt;
+	private LocalDateTime modAt;
+
+}

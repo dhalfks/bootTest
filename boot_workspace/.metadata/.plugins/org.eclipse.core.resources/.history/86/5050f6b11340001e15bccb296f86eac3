@@ -1,0 +1,14 @@
+package com.example.demo.entity;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+
+abstract class TimeBased {
+	
+	@Column(name="reg_at", updatable = false)
+	private LocalDateTime regAt;
+	@Column(name="mod_at")
+	private LocalDateTime modAt;
+
+}

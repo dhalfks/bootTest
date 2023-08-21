@@ -1,0 +1,5 @@
+package com.example.demo.board.repos;
+
+public class BoardRepoTest {
+
+}

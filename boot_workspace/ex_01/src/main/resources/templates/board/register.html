@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Board Register</h2>
+<form action="/board/register" method="post">
+    <div>
+        title : 
+        <input type="text" name="title" value="Test Register Title">
+    </div>
+    <div>
+        writer : 
+        <input type="text" name="writer" value="tester@tester.com">
+    </div>
+    <div>
+        content : 
+        <textarea name="content" cols="30" rows="10">
+            Test Regisetser Content
+        </textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

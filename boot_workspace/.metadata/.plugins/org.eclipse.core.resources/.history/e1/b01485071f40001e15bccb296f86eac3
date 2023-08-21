@@ -1,0 +1,20 @@
+package com.example.demo.service;
+
+import com.example.demo.dto.BoardDTO;
+import com.example.demo.entity.Board;
+
+public interface BoardService {
+
+	Long register(BoardDTO bdto);
+	
+	
+	default Board convertDtoToEntity(BoardDTO bdto) {
+		return Board.builder()
+				.bno(bdto.getBno())
+				.title(bdto.getTitle())
+				.writer(bdto.getWriter())
+				.content(bdto.getContent())
+				.build();
+	}
+
+}
