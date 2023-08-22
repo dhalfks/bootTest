@@ -10,11 +10,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
+import lombok.Setter;
+
 
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
 @Getter
-abstract class TimeBased {
+@Setter
+public class TimeBased {
 	
 	@CreatedDate
 	@Column(name="reg_at", updatable = false)

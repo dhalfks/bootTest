@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Board List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Writer</th>
+            <th>Last Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="dto : ${list}">
+            <td>[[${dto.bno}]]</td>
+            <td><a href="@{/board/detail(bno=${dto.bno})}">[[${dto.title}]]</a></td>
+            <td>[[${dto.writer}]]</td>
+            <td>[[${dto.mod_at}]]</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

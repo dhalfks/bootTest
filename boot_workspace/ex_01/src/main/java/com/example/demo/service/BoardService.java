@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import com.example.demo.dto.BoardDTO;
 import com.example.demo.entity.Board;
 
@@ -26,5 +28,11 @@ public interface BoardService {
 				.regAt(board.getRegAt())
 				.modAt(board.getModAt()).build();
 	}
+
+
+	List<BoardDTO> getList();
+
+
+	BoardDTO getDetail(Long bno);
 
 }
